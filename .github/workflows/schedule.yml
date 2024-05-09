@@ -4,13 +4,8 @@ on:
   - cron: '*/5 * * * *'
 
 jobs:
-  job1:
-    name: Debug
+  hello_world:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Output message
-      run: echo "This is a message from the cron job."
+      - name: Echo current time
+        run: echo "hellou mouss The current server time is $(date)"
