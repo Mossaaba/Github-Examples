@@ -1,0 +1,16 @@
+name: Cron Job
+
+on:
+  schedule:
+    - cron: '02 20 * * *'  # Runs at midnight every day
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Output message
+      run: echo "This is a message from the cron job."
